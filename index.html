@@ -6,92 +6,125 @@
 <title>ILHAM & QONITA | 27 Desember 2026</title>
 <meta name="description" content="Undangan Pernikahan ILHAM & QONITA">
 <style>
-<!-- ================= OPENING 3D ================= -->
-<div id="opening3D">
+/* ===== 3D WEDDING ANIMATION ===== */
 
-    <div class="opening-scene">
+.hero {
+    overflow: hidden;
+    perspective: 1200px;
+}
 
-        <!-- Background Rumah Gadang -->
-        <div class="rumah-gadang"></div>
+.hero-card {
+    transform-style: preserve-3d;
+    animation: cardEntrance 1.8s ease-out forwards;
+}
 
-        <!-- Overlay gelap -->
-        <div class="opening-overlay"></div>
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: rotateX(25deg) rotateY(-12deg) translateY(80px) scale(.85);
+    }
 
-        <!-- Cahaya -->
-        <div class="gold-light light-1"></div>
-        <div class="gold-light light-2"></div>
-        <div class="gold-light light-3"></div>
+    100% {
+        opacity: 1;
+        transform: rotateX(0) rotateY(0) translateY(0) scale(1);
+    }
+}
 
-        <!-- Partikel -->
-        <div class="particles-3d">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+/* Ornamen cincin 3D */
 
-        <!-- Konten -->
-        <div class="opening-content">
+.ring-3d {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    perspective: 800px;
+    pointer-events: none;
+}
 
-            <div class="opening-small">
-                THE WEDDING OF
-            </div>
+.ring {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #d9b86e;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow:
+        0 0 15px #d9b86e,
+        inset 0 0 10px #d9b86e;
 
-            <div class="monogram">
-                IQ
-            </div>
+    transform-style: preserve-3d;
+    animation: ringRotate 5s linear infinite;
+}
 
-            <h1>
-                ILHAM <span>&</span> QONITA
-            </h1>
+@keyframes ringRotate {
+    0% {
+        transform: rotateX(65deg) rotateY(0deg);
+    }
 
-            <div class="opening-line"></div>
+    50% {
+        transform: rotateX(65deg) rotateY(180deg);
+    }
 
-            <div class="opening-date">
-                27 DESEMBER 2026
-            </div>
+    100% {
+        transform: rotateX(65deg) rotateY(360deg);
+    }
+}
 
-            <div class="guest-card">
+/* Partikel emas */
 
-                <p>Kepada Yth.</p>
+.particles span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #d9b86e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #d9b86e;
+    animation: floatParticle 6s infinite ease-in-out;
+}
 
-                <div class="guest-name">
-                    Bapak/Ibu/Saudara/i
-                </div>
+.particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.particles span:nth-child(2) { left: 20%; top: 70%; animation-delay: 1s; }
+.particles span:nth-child(3) { left: 30%; top: 30%; animation-delay: 2s; }
+.particles span:nth-child(4) { left: 40%; top: 80%; animation-delay: .5s; }
+.particles span:nth-child(5) { left: 55%; top: 25%; animation-delay: 1.5s; }
+.particles span:nth-child(6) { left: 65%; top: 65%; animation-delay: 2.5s; }
+.particles span:nth-child(7) { left: 75%; top: 35%; animation-delay: 1s; }
+.particles span:nth-child(8) { left: 85%; top: 75%; animation-delay: 3s; }
+.particles span:nth-child(9) { left: 90%; top: 20%; animation-delay: .7s; }
+.particles span:nth-child(10) { left: 15%; top: 50%; animation-delay: 2.2s; }
 
-                <p class="guest-text">
-                    Dengan penuh rasa bahagia,
-                    kami mengundang Anda untuk hadir
-                    di hari istimewa kami.
-                </p>
+@keyframes floatParticle {
+    0%, 100% {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0) scale(.5);
+    }
 
-                <button id="openInvitation3D">
-                    <span>BUKA UNDANGAN</span>
-                    <b>→</b>
-                </button>
+    50% {
+        opacity: 1;
+        transform: translate3d(30px, -80px, 80px) scale(1.5);
+    }
+}
 
-                <div class="sound-info">
-                    ♫ &nbsp; Disarankan menggunakan headset
-                </div>
+/* Efek muncul ketika undangan dibuka */
 
-            </div>
+body.opened .hero-card {
+    animation: openCard 1.2s ease forwards;
+}
 
-        </div>
+@keyframes openCard {
+    0% {
+        transform: scale(1) rotateX(0);
+    }
 
-    </div>
+    50% {
+        transform: scale(1.08) rotateX(-3deg);
+    }
 
-</div>
+    100% {
+        transform: scale(1) rotateX(0);
+    }
+}
 </style>
 </head>
 <body>
