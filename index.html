@@ -1,301 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-    <div class="particles">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-<div class="ring-3d">
-  <div class="ring"></div>
-</div>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ILHAM & QONITA | 27 Desember 2026</title>
-<meta name="description" content="Undangan Pernikahan ILHAM & QONITA">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ILHAM & QONITA — 27 Desember 2026</title>
+<meta name="description" content="Undangan Pernikahan ILHAM & QONITA — 27 Desember 2026">
 <style>
-/* ===== 3D WEDDING ANIMATION ===== */
-
-.hero {
-    overflow: hidden;
-    perspective: 1200px;
-}
-
-.hero-card {
-    transform-style: preserve-3d;
-    animation: cardEntrance 1.8s ease-out forwards;
-}
-
-@keyframes cardEntrance {
-    0% {
-        opacity: 0;
-        transform: rotateX(25deg) rotateY(-12deg) translateY(80px) scale(.85);
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotateX(0) rotateY(0) translateY(0) scale(1);
-    }
-}
-
-/* Ornamen cincin 3D */
-
-.ring-3d {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 120px;
-    perspective: 800px;
-    pointer-events: none;
-}
-
-.ring {
-    width: 80px;
-    height: 80px;
-    border: 5px solid #d9b86e;
-    border-radius: 50%;
-    margin: auto;
-    box-shadow:
-        0 0 15px #d9b86e,
-        inset 0 0 10px #d9b86e;
-
-    transform-style: preserve-3d;
-    animation: ringRotate 5s linear infinite;
-}
-
-@keyframes ringRotate {
-    0% {
-        transform: rotateX(65deg) rotateY(0deg);
-    }
-
-    50% {
-        transform: rotateX(65deg) rotateY(180deg);
-    }
-
-    100% {
-        transform: rotateX(65deg) rotateY(360deg);
-    }
-}
-
-/* Partikel emas */
-
-.particles span {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: #d9b86e;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #d9b86e;
-    animation: floatParticle 6s infinite ease-in-out;
-}
-
-.particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-.particles span:nth-child(2) { left: 20%; top: 70%; animation-delay: 1s; }
-.particles span:nth-child(3) { left: 30%; top: 30%; animation-delay: 2s; }
-.particles span:nth-child(4) { left: 40%; top: 80%; animation-delay: .5s; }
-.particles span:nth-child(5) { left: 55%; top: 25%; animation-delay: 1.5s; }
-.particles span:nth-child(6) { left: 65%; top: 65%; animation-delay: 2.5s; }
-.particles span:nth-child(7) { left: 75%; top: 35%; animation-delay: 1s; }
-.particles span:nth-child(8) { left: 85%; top: 75%; animation-delay: 3s; }
-.particles span:nth-child(9) { left: 90%; top: 20%; animation-delay: .7s; }
-.particles span:nth-child(10) { left: 15%; top: 50%; animation-delay: 2.2s; }
-
-@keyframes floatParticle {
-    0%, 100% {
-        opacity: 0;
-        transform: translate3d(0, 30px, 0) scale(.5);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translate3d(30px, -80px, 80px) scale(1.5);
-    }
-}
-
-/* Efek muncul ketika undangan dibuka */
-
-body.opened .hero-card {
-    animation: openCard 1.2s ease forwards;
-}
-
-@keyframes openCard {
-    0% {
-        transform: scale(1) rotateX(0);
-    }
-
-    50% {
-        transform: scale(1.08) rotateX(-3deg);
-    }
-
-    100% {
-        transform: scale(1) rotateX(0);
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+:root{--maroon:#641f2a;--deep:#3d1119;--cream:#f7f0e5;--gold:#b7955a;--ink:#302328}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Montserrat,sans-serif;font-weight:400}
+h1,h2,h3,.script{font-family:"Cormorant Garamond",serif}.hero{min-height:100vh;background:linear-gradient(#3d1119cc,#3d111988),url('images/hero.jpg') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:30px}
+.hero .card{max-width:720px}.eyebrow{letter-spacing:5px;text-transform:uppercase;font-size:12px;margin-bottom:25px}.hero h1{font-size:clamp(64px,13vw,120px);font-weight:500;line-height:.8;margin:0}.amp{font-size:.55em;color:#d8bc86;display:block;margin:15px 0}.hero h1 span{display:block}.date{font-size:14px;letter-spacing:4px;margin:35px 0}.btn{display:inline-block;padding:13px 23px;border:1px solid #d8bc86;color:white;text-decoration:none;letter-spacing:2px;font-size:11px;text-transform:uppercase;border-radius:30px;background:#641f2acc}
+section{padding:80px 20px;max-width:1000px;margin:auto}.intro{text-align:center}.intro h2,.event h2,.story h2,.gallery h2,.rsvp h2{font-size:48px;font-weight:500;color:var(--maroon);margin:10px 0}.ornament{color:var(--gold);font-size:24px}.quote{max-width:650px;margin:25px auto;line-height:1.9;font-family:"Cormorant Garamond",serif;font-size:23px;font-style:italic}.couple{display:grid;grid-template-columns:1fr 80px 1fr;align-items:center;text-align:center;gap:15px;margin-top:45px}.person h3{font-size:34px;color:var(--maroon);margin:10px}.person p{font-size:12px;line-height:1.7}.circle{width:160px;height:160px;margin:auto;border-radius:50%;background:#eadcc8 url('images/couple1.jpg') center/cover;border:5px solid #fff;box-shadow:0 5px 20px #0001}.circle.two{background-image:url('images/couple2.jpg')}.and{font-family:"Cormorant Garamond";font-size:42px;color:var(--gold)}
+.event{background:#fffaf2;border-top:1px solid #eadcc8;border-bottom:1px solid #eadcc8;max-width:none;text-align:center}.event-inner{max-width:1000px;margin:auto}.event-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:35px}.event-box{padding:35px 20px;border:1px solid #e4d5c0;background:white}.event-box h3{font-size:29px;color:var(--maroon);margin:8px}.event-box p{font-size:13px;line-height:1.9}.map{display:inline-block;color:var(--maroon);border:1px solid var(--maroon);padding:11px 20px;border-radius:25px;text-decoration:none;font-size:11px;letter-spacing:1px}
+.countdown{display:flex;justify-content:center;gap:12px;margin:40px 0}.time{min-width:75px;padding:15px 8px;background:var(--maroon);color:white}.time b{display:block;font-family:"Cormorant Garamond";font-size:34px;font-weight:500}.time small{font-size:9px;letter-spacing:1px}
+.story{text-align:center}.timeline{max-width:700px;margin:35px auto;text-align:left;border-left:1px solid var(--gold);padding-left:28px}.timeline article{margin-bottom:30px}.timeline h3{color:var(--maroon);font-size:27px;margin:0}.timeline p{font-size:13px;line-height:1.8}
+.gallery{text-align:center}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}.photos img{width:100%;height:280px;object-fit:cover}
+.rsvp{text-align:center}.rsvp p{font-size:13px;line-height:1.8}.wa{background:var(--maroon);color:white;text-decoration:none;display:inline-block;padding:14px 25px;border-radius:28px;font-size:11px;letter-spacing:1px}
+footer{background:var(--deep);color:#fff;text-align:center;padding:60px 20px}.footer-name{font-size:52px;color:#e3c992}.music{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:50%;border:0;background:var(--maroon);color:#fff;z-index:10;cursor:pointer}
+@media(max-width:650px){section{padding:60px 18px}.couple{grid-template-columns:1fr}.and{margin:-5px}.event-grid{grid-template-columns:1fr}.photos{grid-template-columns:1fr 1fr}.photos img{height:190px}.photos img:last-child{grid-column:span 2}.hero h1{font-size:72px}.countdown{gap:5px}.time{min-width:62px}}
 </style>
 </head>
 <body>
-<button class="music" id="musicBtn">♫</button>
+<button class="music" id="musicBtn" aria-label="Musik">♫</button>
 <audio id="music" loop src="music.mp3"></audio>
 
-<div class="particles">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-<div class="ring-3d">
-  <div class="ring"></div>
-</div>
-  
 <header class="hero">
-  <div class="hero-card">
-    <div class="small">The Wedding Of</div>
-    <div class="names">ILHAM <span class="amp">&amp;</span> QONITA</div>
-    <div class="date">27 DESEMBER 2026</div>
-    <button class="btn" id="openInvitation">Buka Undangan</button>
+  <div class="card">
+    <div class="eyebrow">The Wedding of</div>
+    <h1><span>ILHAM</span><span class="amp">&amp;</span><span>QONITA</span></h1>
+    <div class="date">27 · 12 · 2026</div>
+    <a class="btn" href="#details">Buka Undangan</a>
   </div>
 </header>
 
-<section id="undangan" class="intro">
- <div class="orn">✦</div><h2 class="title">Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
- <p class="quote">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri...”</p>
- <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami.</p>
- <div class="couple">
-   <div><div class="monogram">I</div><h3>ILHAM</h3><p>Putra dari<br><b>Nama Ayah &amp; Nama Ibu</b></p></div>
-   <div class="and">&amp;</div>
-   <div><div class="monogram">Q</div><h3>QONITA</h3><p>Putri dari<br><b>Nama Ayah &amp; Nama Ibu</b></p></div>
- </div>
+<section class="intro" id="details">
+  <div class="ornament">✦</div>
+  <h2>Assalamu'alaikum</h2>
+  <p class="quote">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri...”</p>
+  <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami.</p>
+
+  <div class="couple">
+    <div class="person"><div class="circle"></div><h3>Ilham</h3><p>Putra dari<br><b>Nama Ayah & Nama Ibu</b></p></div>
+    <div class="and">&amp;</div>
+    <div class="person"><div class="circle two"></div><h3>Qonita</h3><p>Putri dari<br><b>Nama Ayah & Nama Ibu</b></p></div>
+  </div>
 </section>
 
-<section class="band">
- <div class="orn">✦</div><h2 class="title">Menuju Hari Bahagia</h2>
- <div class="count">
-  <div class="unit"><b id="d">0</b><span>HARI</span></div><div class="unit"><b id="h">0</b><span>JAM</span></div><div class="unit"><b id="m">0</b><span>MENIT</span></div><div class="unit"><b id="s">0</b><span>DETIK</span></div>
+<section class="event" id="acara">
+ <div class="event-inner">
+  <div class="ornament">✦</div><h2>Save The Date</h2>
+  <div class="countdown" id="countdown">
+   <div class="time"><b id="days">0</b><small>HARI</small></div>
+   <div class="time"><b id="hours">0</b><small>JAM</small></div>
+   <div class="time"><b id="mins">0</b><small>MENIT</small></div>
+   <div class="time"><b id="secs">0</b><small>DETIK</small></div>
+  </div>
+  <div class="event-grid">
+   <div class="event-box"><div class="ornament">❧</div><h3>Akad Nikah</h3><p><b>Minggu, 27 Desember 2026</b><br>09.00 WIB — selesai</p></div>
+   <div class="event-box"><div class="ornament">❧</div><h3>Resepsi</h3><p><b>Minggu, 27 Desember 2026</b><br>11.00 WIB — selesai</p></div>
+  </div>
+  <div style="margin-top:30px"><p><b>Politeknik Negeri Batam</b><br>Batam, Kepulauan Riau</p><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Politeknik+Negeri+Batam">Lihat Lokasi</a></div>
  </div>
-</section>
-
-<section>
- <div class="orn">✦</div><h2 class="title">Akad &amp; Resepsi</h2>
- <div class="events">
-  <div class="event"><div class="orn">♡</div><h3>Akad Nikah</h3><p><b>Minggu, 27 Desember 2026</b><br>10.00 WIB — selesai</p></div>
-  <div class="event"><div class="orn">♢</div><h3>Resepsi</h3><p><b>Minggu, 27 Desember 2026</b><br>15.00 — 21.00 WIB</p></div>
- </div>
- <div class="map"><p><b>POLITEKNIK NEGERI BATAM</b><br>Batam, Kepulauan Riau</p>
- <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Politeknik+Negeri+Batam">📍 Buka Google Maps</a></div>
 </section>
 
 <section class="story">
- <div class="orn">✦</div><h2 class="title">Our Story</h2>
- <p>Dua insan yang dipertemukan dalam perjalanan hidup, kemudian memantapkan hati untuk melangkah bersama menuju satu ikatan suci.</p>
+ <div class="ornament">✦</div><h2>Our Story</h2>
  <div class="timeline">
-  <div class="step"><div class="circle">♡</div><article><h3>Pertama Bertemu</h3><p>
-    Kisah kami bermula di tahun 2022, ketika kami dipertemukan
-    di satu perusahaan yang sama. Di tengah kesibukan bekerja,
-    ada satu momen sederhana yang hingga kini masih saya ingat.
-  </p>
-
-  <p>
-    Saat itu, saya melihat Qonita sedang mengisi barang dengan
-    wajah yang cantik dan penuh keceriaan. Senyumnya yang tulus
-    dan pembawaannya yang ceria berhasil membuat hati saya terpana.
-  </p>
-
-  <p>
-    Dengan sedikit keberanian, saya meminta bantuan seorang teman
-    untuk menyampaikan kepada Qonita bahwa saya ingin berkenalan
-    dengannya.
-  </p>
-
-  <p>
-    Seiring berjalannya waktu, kami mulai saling mengenal.
-    Hingga akhirnya saya memberanikan diri menanyakan akun
-    Instagramnya. Dari situlah komunikasi kami semakin intens,
-    melalui pesan dan obrolan yang membuat kami semakin dekat.
-  </p>
-
-  <p>
-    <b>04 Desember 2022</b><br>
-    First Date — untuk pertama kalinya kami pergi bersama
-    dan menghabiskan waktu berdua.
-  </p>
-
-  <p>
-    <b>18 Desember 2022</b><br>
-    Kami memutuskan untuk memulai hubungan dan menjalani
-    perjalanan bersama sebagai pasangan.
-  </p>
-
-  <p>
-    Dari sebuah pertemuan sederhana di tempat kerja,
-    berlanjut melalui pesan-pesan kecil, hingga akhirnya
-    membawa kami menuju hari bahagia.
-  </p></article>
-<section class="story">
-
-  <div class="orn">✦</div>
-</section></div>
-  <div class="step"><div class="circle">♧</div><h4>Lamaran</h4><p>Memantapkan hati</p></div>
-  <div class="step"><div class="circle">∞</div><h4>Menikah</h4><p>27 Desember 2026</p></div>
+  <article><h3>Pertama Bertemu</h3><p>Ceritakan singkat bagaimana kalian pertama kali bertemu.</p></article>
+  <article><h3>Mulai Bersama</h3><p>Ceritakan momen perjalanan hubungan kalian.</p></article>
+  <article><h3>Menuju Hari Bahagia</h3><p>Dengan penuh rasa syukur, kami melangkah menuju kehidupan baru bersama.</p></article>
  </div>
 </section>
 
 <section class="gallery">
- <div class="orn">✦</div><h2 class="title">Luxury Rumah Gadang</h2>
- <p>Desain utama undangan dengan nuansa Minangkabau, maroon, cream, dan gold.</p>
- <img src="assets/rumah-gadang-design.png" alt="Desain undangan ILHAM dan QONITA dengan Rumah Gadang">
+ <div class="ornament">✦</div><h2>Our Moments</h2>
+ <div class="photos">
+  <img src="images/photo1.jpg" alt="Foto Ilham dan Qonita"><img src="images/photo2.jpg" alt="Foto Ilham dan Qonita"><img src="images/photo3.jpg" alt="Foto Ilham dan Qonita"><img src="images/photo4.jpg" alt="Foto Ilham dan Qonita"><img src="images/photo5.jpg" alt="Foto Ilham dan Qonita">
+ </div>
 </section>
 
 <section class="rsvp">
- <div class="orn">✦</div><h2 class="title">Konfirmasi Kehadiran</h2>
- <p>Mohon konfirmasi kehadiran dan berikan doa terbaik untuk kami.</p>
- <a class="wa primary" target="_blank" href="https://wa.me/6287798932442?text=Halo%20Ilham%20%26%20Qonita%2C%20saya%20ingin%20konfirmasi%20kehadiran.">WhatsApp RSVP</a>
- <a class="wa secondary" href="mailto:?subject=Doa%20untuk%20Ilham%20%26%20Qonita&body=Selamat%20atas%20pernikahannya.">Kirim Doa &amp; Ucapan</a>
+ <div class="ornament">✦</div><h2>RSVP</h2>
+ <p>Mohon konfirmasi kehadiran Anda melalui WhatsApp.</p>
+ <a class="wa" target="_blank" href="https://wa.me/6281234567890?text=Halo%20Ilham%20%26%20Qonita%2C%20saya%20ingin%20konfirmasi%20kehadiran%20di%20acara%20pernikahan.">Konfirmasi Kehadiran</a>
+ <p style="margin-top:35px">Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
 </section>
 
-<footer><div class="orn">✦</div><div class="footer-name">ILHAM &amp; QONITA</div><p>27 Desember 2026</p><p>Terima kasih atas doa dan kehadiran Anda.</p></footer>
+<footer><div class="ornament">✦</div><div class="footer-name">ILHAM &amp; QONITA</div><p>27 Desember 2026</p><p>Terima kasih atas doa dan restunya.</p></footer>
 
 <script>
-  const openButton = document.getElementById("openInvitation");
-const music = document.getElementById("music");
-
-openButton.addEventListener("click", function () {
-
-    document.body.classList.add("opened");
-
-    music.volume = 0.7;
-
-    music.play().then(() => {
-        document.getElementById("musicBtn").textContent = "Ⅱ";
-    }).catch(() => {
-        console.log("Browser memblokir autoplay.");
-    });
-
-    document.getElementById("undangan").scrollIntoView({
-        behavior: "smooth"
-    });
-});
-const target=new Date("2026-12-27T08:00:00+07:00").getTime();
-function countdown(){let x=Math.max(0,target-Date.now());let d=Math.floor(x/86400000);x%=86400000;let h=Math.floor(x/3600000);x%=3600000;let m=Math.floor(x/60000);let s=Math.floor(x/1000);document.querySelector('#d').textContent=d;document.querySelector('#h').textContent=h;document.querySelector('#m').textContent=m;document.querySelector('#s').textContent=s}
-countdown();setInterval(countdown,1000);
-const a=document.querySelector('#music'),b=document.querySelector('#musicBtn');b.onclick=()=>{a.paused?(a.play(),b.textContent='Ⅱ'):(a.pause(),b.textContent='♫')};
+const target=new Date("2026-12-27T09:00:00+07:00").getTime();
+function tick(){let d=Math.max(0,target-Date.now());document.getElementById("days").textContent=Math.floor(d/86400000);d%=86400000;document.getElementById("hours").textContent=Math.floor(d/3600000);d%=3600000;document.getElementById("mins").textContent=Math.floor(d/60000);d%=60000;document.getElementById("secs").textContent=Math.floor(d/1000)}
+tick();setInterval(tick,1000);
+const btn=document.getElementById("musicBtn"), audio=document.getElementById("music");
+btn.onclick=()=>{if(audio.paused){audio.play();btn.textContent="Ⅱ"}else{audio.pause();btn.textContent="♫"}};
 </script>
-  
 </body>
 </html>
