@@ -6,6 +6,125 @@
 <title>ILHAM & QONITA | 27 Desember 2026</title>
 <meta name="description" content="Undangan Pernikahan ILHAM & QONITA">
 <style>
+  /* ===== 3D WEDDING ANIMATION ===== */
+
+.hero {
+    overflow: hidden;
+    perspective: 1200px;
+}
+
+.hero-card {
+    transform-style: preserve-3d;
+    animation: cardEntrance 1.8s ease-out forwards;
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: rotateX(25deg) rotateY(-12deg) translateY(80px) scale(.85);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0) rotateY(0) translateY(0) scale(1);
+    }
+}
+
+/* Ornamen cincin 3D */
+
+.ring-3d {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    perspective: 800px;
+    pointer-events: none;
+}
+
+.ring {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #d9b86e;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow:
+        0 0 15px #d9b86e,
+        inset 0 0 10px #d9b86e;
+
+    transform-style: preserve-3d;
+    animation: ringRotate 5s linear infinite;
+}
+
+@keyframes ringRotate {
+    0% {
+        transform: rotateX(65deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateX(65deg) rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateX(65deg) rotateY(360deg);
+    }
+}
+
+/* Partikel emas */
+
+.particles span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #d9b86e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #d9b86e;
+    animation: floatParticle 6s infinite ease-in-out;
+}
+
+.particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.particles span:nth-child(2) { left: 20%; top: 70%; animation-delay: 1s; }
+.particles span:nth-child(3) { left: 30%; top: 30%; animation-delay: 2s; }
+.particles span:nth-child(4) { left: 40%; top: 80%; animation-delay: .5s; }
+.particles span:nth-child(5) { left: 55%; top: 25%; animation-delay: 1.5s; }
+.particles span:nth-child(6) { left: 65%; top: 65%; animation-delay: 2.5s; }
+.particles span:nth-child(7) { left: 75%; top: 35%; animation-delay: 1s; }
+.particles span:nth-child(8) { left: 85%; top: 75%; animation-delay: 3s; }
+.particles span:nth-child(9) { left: 90%; top: 20%; animation-delay: .7s; }
+.particles span:nth-child(10) { left: 15%; top: 50%; animation-delay: 2.2s; }
+
+@keyframes floatParticle {
+    0%, 100% {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0) scale(.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate3d(30px, -80px, 80px) scale(1.5);
+    }
+}
+
+/* Efek muncul ketika undangan dibuka */
+
+body.opened .hero-card {
+    animation: openCard 1.2s ease forwards;
+}
+
+@keyframes openCard {
+    0% {
+        transform: scale(1) rotateX(0);
+    }
+
+    50% {
+        transform: scale(1.08) rotateX(-3deg);
+    }
+
+    100% {
+        transform: scale(1) rotateX(0);
+    }
+}
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap');
 :root{--maroon:#650f20;--maroon2:#3b0712;--cream:#f8efdf;--gold:#c49b55;--text:#3c2528}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--text);font-family:Montserrat,sans-serif}
@@ -28,12 +147,29 @@ footer{background:var(--maroon2);color:#fff;text-align:center;padding:65px 20px}
 <button class="music" id="musicBtn">♫</button>
 <audio id="music" loop src="music.mp3"></audio>
 
+<div class="particles">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="ring-3d">
+  <div class="ring"></div>
+</div>
+  
 <header class="hero">
   <div class="hero-card">
     <div class="small">The Wedding Of</div>
     <div class="names">ILHAM <span class="amp">&amp;</span> QONITA</div>
     <div class="date">27 DESEMBER 2026</div>
-    <a class="btn" href="#undangan">Buka Undangan</a>
+    <button class="btn" id="openInvitation">Buka Undangan</button>
   </div>
 </header>
 
@@ -136,10 +272,30 @@ footer{background:var(--maroon2);color:#fff;text-align:center;padding:65px 20px}
 <footer><div class="orn">✦</div><div class="footer-name">ILHAM &amp; QONITA</div><p>27 Desember 2026</p><p>Terima kasih atas doa dan kehadiran Anda.</p></footer>
 
 <script>
+  const openButton = document.getElementById("openInvitation");
+const music = document.getElementById("music");
+
+openButton.addEventListener("click", function () {
+
+    document.body.classList.add("opened");
+
+    music.volume = 0.7;
+
+    music.play().then(() => {
+        document.getElementById("musicBtn").textContent = "Ⅱ";
+    }).catch(() => {
+        console.log("Browser memblokir autoplay.");
+    });
+
+    document.getElementById("undangan").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 const target=new Date("2026-12-27T08:00:00+07:00").getTime();
 function countdown(){let x=Math.max(0,target-Date.now());let d=Math.floor(x/86400000);x%=86400000;let h=Math.floor(x/3600000);x%=3600000;let m=Math.floor(x/60000);let s=Math.floor(x/1000);document.querySelector('#d').textContent=d;document.querySelector('#h').textContent=h;document.querySelector('#m').textContent=m;document.querySelector('#s').textContent=s}
 countdown();setInterval(countdown,1000);
 const a=document.querySelector('#music'),b=document.querySelector('#musicBtn');b.onclick=()=>{a.paused?(a.play(),b.textContent='Ⅱ'):(a.pause(),b.textContent='♫')};
 </script>
+  
 </body>
 </html>
